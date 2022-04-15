@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.bongo</groupId>
-	<artifactId>employeemanager2</artifactId>
+	<artifactId>employeemanager_BackEnd</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>employeemanager2</name>
+	<name>employeemanager_BackEnd</name>
 	<description>second employee manager app</description>
 	<properties>
 		<java.version>1.8</java.version>

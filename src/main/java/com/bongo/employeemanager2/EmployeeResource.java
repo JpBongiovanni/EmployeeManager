@@ -16,11 +16,16 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.bongo.employeemanager2.model.Employee;
 import com.bongo.employeemanager2.service.EmployeeService;
+import com.bongo.employeemanager2.service.TaskService;
 
 @RestController
 @RequestMapping("/employee")
 public class EmployeeResource {
+	
 	private final EmployeeService employeeService;
+	
+	private TaskService taskService;
+	
 	
 	public EmployeeResource(EmployeeService employeeService) {
 		this.employeeService = employeeService;

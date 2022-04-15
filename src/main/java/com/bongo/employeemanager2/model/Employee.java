@@ -23,6 +23,9 @@ public class Employee implements Serializable {
 	private String imageUrl;
 	@Column(nullable = false, updatable = false)
 	private String employeeCode;
+	private String age;
+	private String bio;
+	
 	
 	//no args constructor
 	public Employee() {
@@ -30,7 +33,7 @@ public class Employee implements Serializable {
 	}
 	
 	// constructor minus the ID field as java will generate that for us on construction
-	public Employee(String name, String email, String jobTitle, String phone, String imageUrl, String employeeCode) {
+	public Employee(String name, String email, String jobTitle, String phone, String imageUrl, String employeeCode, String age, String bio) {
 		super();
 		this.name = name;
 		this.email = email;
@@ -38,6 +41,8 @@ public class Employee implements Serializable {
 		this.phone = phone;
 		this.imageUrl = imageUrl;
 		this.employeeCode = employeeCode;
+		this.age = age;
+		this.setBio(bio);
 	}
 	
 	//Getters and Setters
@@ -97,11 +102,29 @@ public class Employee implements Serializable {
 		this.employeeCode = employeeCode;
 	}
 
+	public String getAge() {
+		return age;
+	}
+
+	public void setAge(String age) {
+		this.age = age;
+	}
+
+	public String getBio() {
+		return bio;
+	}
+
+	public void setBio(String bio) {
+		this.bio = bio;
+	}
+
 	@Override
 	public String toString() {
 		return "Employee [id=" + id + ", name=" + name + ", email=" + email + ", jobTitle=" + jobTitle + ", phone="
-				+ phone + ", imageUrl=" + imageUrl + ", employeeCode=" + employeeCode + "]";
+				+ phone + ", imageUrl=" + imageUrl + ", employeeCode=" + employeeCode + ", age=" + age + ", bio=" + bio
+				+ "]";
 	}
+	
 	
 	
 	
