@@ -25,6 +25,9 @@ public class Employee implements Serializable {
 	private String employeeCode;
 	private String age;
 	private String bio;
+	private String link1;
+	private String link2;
+	private String link3;
 	
 	
 	//no args constructor
@@ -33,7 +36,7 @@ public class Employee implements Serializable {
 	}
 	
 	// constructor minus the ID field as java will generate that for us on construction
-	public Employee(String name, String email, String jobTitle, String phone, String imageUrl, String employeeCode, String age, String bio) {
+	public Employee(String name, String email, String jobTitle, String phone, String imageUrl, String employeeCode, String age, String bio, String link1, String link2, String link3) {
 		super();
 		this.name = name;
 		this.email = email;
@@ -43,6 +46,10 @@ public class Employee implements Serializable {
 		this.employeeCode = employeeCode;
 		this.age = age;
 		this.setBio(bio);
+		this.link1 = link1;
+		this.link2 = link2;
+		this.link3 = link3;
+	
 	}
 	
 	//Getters and Setters
@@ -118,14 +125,37 @@ public class Employee implements Serializable {
 		this.bio = bio;
 	}
 
+
+	public String getLink1() {
+		return link1;
+	}
+
+	public void setLink1(String link1) {
+		this.link1 = link1;
+	}
+
+	public String getLink2() {
+		return link2;
+	}
+
+	public void setLink2(String link2) {
+		this.link2 = link2;
+	}
+
+	public String getLink3() {
+		return link3;
+	}
+
+	public void setLink3(String link3) {
+		this.link3 = link3;
+	}
+
 	@Override
 	public String toString() {
 		return "Employee [id=" + id + ", name=" + name + ", email=" + email + ", jobTitle=" + jobTitle + ", phone="
 				+ phone + ", imageUrl=" + imageUrl + ", employeeCode=" + employeeCode + ", age=" + age + ", bio=" + bio
-				+ "]";
+				+ ", link1=" + link1 + ", link2=" + link2 + ", link3=" + link3 + "]";
 	}
-	
-	
 	
 	
 	
